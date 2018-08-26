@@ -19,10 +19,10 @@
   "dependencies": {
     "mobx": "^4.2.1",
     "mobx-react": "^5.1.2",
-    "preact": "^8.2.9",
-    "preact-compat": "^3.18.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-transition-group": "^2.2.0",
-    "reactstrap": "^4.8.0"
+    "reactstrap": "^6.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
