@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const config = require('./webpack.config.js');
 
 config.devtool = 'cheap-module-eval-source-map';
+config.mode = 'development';
 config.entry.unshift('webpack-hot-middleware/client');
 config.plugins = [
   new webpack.optimize.OccurrenceOrderPlugin(),

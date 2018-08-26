@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
 import { Provider } from 'mobx-react';
 import { Router } from 'react-router-dom';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
+import browserHistory from './browserHistory';
 import App from './App.js';
 
-const browserHistory = createBrowserHistory();
 const routerStore = new RouterStore();
 const history = syncHistoryWithStore(browserHistory, routerStore);
 const stores = {

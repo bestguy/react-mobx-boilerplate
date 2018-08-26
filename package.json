@@ -8,7 +8,7 @@
     "dist/bundle.js"
   ],
   "scripts": {
-    "dist": "webpack -p",
+    "dist": "webpack --mode production",
     "lint": "eslint src; exit 0",
     "start": "node dev_server.js",
     "test": "mocha --recursive --timeout 10000 --compilers js:babel-register"
@@ -30,7 +30,8 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-transition-group": "^2.4.0",
-    "reactstrap": "^6.4.0"
+    "reactstrap": "^6.4.0",
+    "webpack-command": "^0.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -53,8 +54,8 @@
     "postcss-loader": "^2.0.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.18.2",
-    "webpack": "^3.5.5",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.1"
+    "webpack": "^4.17.1",
+    "webpack-dev-middleware": "^3.2.0",
+    "webpack-hot-middleware": "^2.22.3"
   }
 }
