@@ -17,8 +17,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "mobx": "^4.2.1",
-    "mobx-react": "^5.1.2",
+    "mobx": "^5.0.5",
+    "mobx-react": "^5.2.5",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-transition-group": "^2.2.0",
