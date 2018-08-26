@@ -1,44 +1,44 @@
-import React, { Component } from 'react';
-import fecha from 'fecha';
-import { observable } from 'mobx';
+import React from 'react';
 import { observer } from 'mobx-react';
-import { Button, ButtonToolbar, Card, CardBody, Container, Col, Row } from 'reactstrap';
+import { Col, ListGroup, Row } from 'reactstrap';
+import { NavLink, Route, withRouter } from 'react-router-dom';
+import About from './About';
+import Home from './Home';
 
+const ListGroupNav = ({ children, to }) => (
+  <NavLink
+    to={to}
+    exact
+    className="list-group-item"
+    activeClassName="active"
+  >
+    {children}
+  </NavLink>
+);
+
+@withRouter
 @observer
-export default class App extends Component {
-
-  @observable time = new Date();
-
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.time = new Date();
-    }, 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
+export default class App extends React.Component {
   render() {
     return (
-      <Container className="p-3">
-        <Row>
-          <Col sm={6} xs={12}>
-            <ButtonToolbar>
-              <Button color="primary">Hello</Button>
-              <Button>World!</Button>
-            </ButtonToolbar>
+      <div>
+        <Row className="no-gutters">
+          <Col sm={3} xs={12}>
+            <ListGroup flush>
+              <ListGroupNav to="/">
+                Home
+              </ListGroupNav>
+              <ListGroupNav to="/about">
+                About
+              </ListGroupNav>
+            </ListGroup>
           </Col>
-          <Col sm="3">
-            <Card>
-              <CardBody>
-                <h2>{fecha.format(this.time, 'h:mm:ssA')}</h2>
-                <h3 className="text-muted">{fecha.format(this.time, 'MMM Do, YYYY')}</h3>
-              </CardBody>
-            </Card>
+          <Col sm={9} xs={12} className="p-3">
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
           </Col>
         </Row>
-      </Container>
+      </div>
     );
   }
 }
