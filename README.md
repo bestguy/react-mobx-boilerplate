@@ -1,11 +1,11 @@
-# Preact, MobX, Bootstrap 4 Boilerplate
+# React 16, MobX, Bootstrap 4 Boilerplate
 
 This is boilerplate for:
 
-[Preact](https://preactjs.com)
-[MobX](https://mobxjs.github.io/mobx/) 
-[Webpack](https://mobxjs.github.io/mobx/) 
-[Bootstrap 4](https://mobxjs.github.io/mobx/) 
+[React](https://reactjs.org)
+[MobX](https://mobx.js.org) 
+[Webpack](https://webpack.github.io) 
+[Bootstrap 4](https://getbootstrap.com) 
 
 ## Build
 

@@ -1,8 +1,8 @@
 {
-  "name": "preact-mobx-boilerplate",
-  "version": "0.0.1",
-  "description": "Preact and MobX boilerplate",
-  "repository": "bestguy/preact-mobx-boilerplate",
+  "name": "react-mobx-boilerplate",
+  "version": "0.2.0",
+  "description": "React and MobX boilerplate",
+  "repository": "bestguy/react-mobx-boilerplate",
   "main": "dist/bundle.js",
   "files": [
     "dist/bundle.js"
