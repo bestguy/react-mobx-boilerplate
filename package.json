@@ -29,7 +29,7 @@
     "react-fontawesome": "^1.6.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-transition-group": "^2.2.0",
+    "react-transition-group": "^2.4.0",
     "reactstrap": "^6.4.0"
   },
   "devDependencies": {
@@ -48,8 +48,10 @@
     "eslint-plugin-react": "^7.11.1",
     "express": "^4.14.0",
     "mocha": "^5.1.1",
+    "node-sass": "^4.9.3",
     "postcss": "^6.0.8",
     "postcss-loader": "^2.0.6",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
     "webpack-dev-middleware": "^1.6.1",
