@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ListGroup } from 'reactstrap';
 import { NavLink, withRouter } from 'react-router-dom';
 import Icon from 'react-fontawesome';
@@ -13,6 +14,11 @@ const ListGroupNav = ({ children, to }) => (
     {children}
   </NavLink>
 );
+
+ListGroupNav.propTypes = {
+  children: PropTypes.node,
+  to: PropTypes.string
+};
 
 @withRouter
 export default class Sidebar extends React.Component {
