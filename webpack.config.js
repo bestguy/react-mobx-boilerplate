@@ -12,15 +12,13 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.html$/, loader: 'html-loader' },
       {
         test: /\.js/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'stage-1', 'stage-2'],
-          plugins: [['transform-react-jsx'],
-            'transform-decorators-legacy']
+          presets: ['env', 'react', 'stage-2'],
+          plugins: ['transform-decorators-legacy']
         }
       },
       {
@@ -48,4 +46,3 @@ module.exports = {
     })
   ]
 };
-
