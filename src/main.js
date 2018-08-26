@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { Provider } from 'mobx-react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
 import App from './App.js';
 
