@@ -5,6 +5,8 @@ const app = new express();
 
 app.use(express.static(path.resolve(__dirname)));
 
+app.get('/about', (req, res) => res.sendFile(path.join(__dirname, '/index.html')));
+
 // Dev middleware:
 
 const webpack = require('webpack');
