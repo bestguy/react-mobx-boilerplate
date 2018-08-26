@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import fecha from 'fecha';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
-import { Button, ButtonToolbar, Card, CardBlock, Container, Col, Row, Table } from 'reactstrap';
+import { Button, ButtonToolbar, Card, CardBody, Container, Col, Row } from 'reactstrap';
 
 @observer
 export default class App extends Component {
@@ -31,10 +31,10 @@ export default class App extends Component {
           </Col>
           <Col sm="3">
             <Card>
-              <CardBlock>
+              <CardBody>
                 <h2>{fecha.format(this.time, 'h:mm:ssA')}</h2>
                 <h3 className="text-muted">{fecha.format(this.time, 'MMM Do, YYYY')}</h3>
-              </CardBlock>
+              </CardBody>
             </Card>
           </Col>
         </Row>
