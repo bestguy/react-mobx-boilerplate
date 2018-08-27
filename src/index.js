@@ -18,7 +18,7 @@ render(
       <App />
     </Router>
   </Provider>,
-  document.getElementById('main')
+  document.getElementById('app')
 );
 
 if (module.hot) {
