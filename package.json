@@ -17,10 +17,13 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "classnames": "^2.2.6",
     "fecha": "^2.3.1",
     "history": "^4.7.2",
+    "lodash.range": "^3.2.0",
     "mobx": "^5.0.5",
     "mobx-react": "^5.2.5",
     "mobx-react-router": "^4.0.4",
