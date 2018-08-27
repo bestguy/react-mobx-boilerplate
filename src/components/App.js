@@ -1,26 +1,35 @@
 import React from 'react';
+import { observable } from 'mobx';
 import { observer } from 'mobx-react';
-import { Col, Row } from 'reactstrap';
 import { Route, withRouter } from 'react-router-dom';
+import { Button } from 'reactstrap';
+import Icon from 'react-fontawesome';
+import classnames from 'classnames';
 import About from './About';
 import Home from './Home';
 import Sidebar from './Sidebar';
+import './App.scss';
 
 @withRouter
 @observer
 export default class App extends React.Component {
+  @observable open = false;
+
   render() {
+    const className = classnames({ open: this.open });
     return (
-      <div>
-        <Row className="no-gutters">
-          <Col xs={2} sm={3}>
-            <Sidebar />
-          </Col>
-          <Col xs={10} sm={9} className="p-3">
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-          </Col>
-        </Row>
+      <div className={className}>
+        <aside id="sidebar" className="bg-secondary">
+          <Sidebar />
+        </aside>
+        <Button id="menu" outline size="sm" className="border-0" onClick={() => this.open = !this.open}>
+          <Icon name="bars" size="2x" />
+        </Button>
+        <section id="main" className="p-5">
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+        </section>
+        <div id="backdrop" className="modal-backdrop show" onClick={() => this.open = !this.open} />
       </div>
     );
   }
