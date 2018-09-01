@@ -23,9 +23,16 @@ module.exports = {
         test: /\.s?css$/,
         loader: 'style-loader!css-loader?modules&camelCase&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass-loader'
       },
+      {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader'
+      },
     ]
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin()
-  ]
+  ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+  }
 };

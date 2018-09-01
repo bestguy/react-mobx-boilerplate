@@ -9,11 +9,17 @@ import About from './About';
 import Home from './Home';
 import Sidebar from './Sidebar';
 import './App.scss';
+import store from '../stores/UserStore.ts';
 
 @withRouter
 @observer
 export default class App extends React.Component {
   @observable open = false;
+
+  async componentDidMount() {
+    const user = await store.getUser(123);
+    console.log(user);
+  }
 
   render() {
     const className = classnames({ open: this.open });

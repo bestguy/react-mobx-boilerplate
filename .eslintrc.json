@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint",
+  "parser": "typescript-eslint-parser",
   "env": {
     "browser": true,
     "node": true
@@ -20,5 +20,10 @@
         "render"
       ]
     }]
+  },
+  "settings": {
+    "import/parsers": {
+      "typescript-eslint-parser": [".ts", ".tsx"]
+    }
   }
 }
