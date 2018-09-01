@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    'babel-polyfill',
+    '@babel/polyfill',
     path.resolve(__dirname, './src/index.js')
   ],
   output: {
@@ -17,16 +17,12 @@ module.exports = {
       {
         test: /\.js/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['env', 'react', 'stage-2'],
-          plugins: ['transform-decorators-legacy']
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.s?css$/,
         loader: 'style-loader!css-loader?modules&camelCase&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass-loader'
-      }
+      },
     ]
   },
   plugins: [
