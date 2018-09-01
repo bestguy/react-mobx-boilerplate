@@ -61,6 +61,7 @@ const Clock = ({ width = 200, height = 200, time }) => {
         />
         {range(60).map(tick => (
           <line
+            key={tick}
             x1={0}
             y1={tick % 5 ? -92 : -86}
             x2={0}
