@@ -1,4 +1,4 @@
-import React, { ReactNode, StatelessComponent } from 'react';
+import React, { ReactNode, FunctionComponent } from 'react';
 import { ListGroup } from 'reactstrap';
 import { NavLink, withRouter } from 'react-router-dom';
 import Icon from 'react-fontawesome';
@@ -8,7 +8,7 @@ type Props = {
   to: string;
 };
 
-const ListGroupNav: StatelessComponent<Props> = ({ children, to }) => (
+const ListGroupNav: FunctionComponent<Props> = ({ children, to }) => (
   <NavLink
     to={to}
     exact

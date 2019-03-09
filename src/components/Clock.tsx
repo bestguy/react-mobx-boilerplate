@@ -1,4 +1,4 @@
-import React, { StatelessComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import range from 'lodash.range';
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   time: Date;
 };
 
-const Clock: StatelessComponent<Props> = ({ width = 200, height = 200, time }) => {
+const Clock: FunctionComponent<Props> = ({ width = 200, height = 200, time }) => {
   const h = time.getHours();
   const m = time.getMinutes();
   const s = time.getSeconds();

@@ -1,4 +1,4 @@
-import React, { StatelessComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import { ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ type Props = {
   to: string;
 };
 
-const ListGroupNav: StatelessComponent<Props> = ({ children, to }) => (
+const ListGroupNav: FunctionComponent<Props> = ({ children, to }) => (
   <NavLink to={to} exact className="list-group-item" activeClassName="active">
     {children}
   </NavLink>

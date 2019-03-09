@@ -1,7 +1,7 @@
-import React, { StatelessComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import Icon from 'react-fontawesome';
 
-const AboutPage: StatelessComponent = () => (
+const AboutPage: FunctionComponent = () => (
   <div>
     <h1 className="border-dark border-bottom p-2">
       <Icon name="info-circle" className="text-info" /> About
