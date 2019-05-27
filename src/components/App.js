@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
 import { Route, withRouter } from 'react-router-dom';
-import { Button } from 'reactstrap';
+import { Button, Spinner } from 'reactstrap';
 import Icon from 'react-fontawesome';
 import classnames from 'classnames';
-import About from './About';
-import Home from './Home';
 import Sidebar from './Sidebar';
 import './App.scss';
+
+const About = lazy(() => import('./About'));
+const Home = lazy(() => import('./Home'));
 
 @withRouter
 @observer
@@ -26,8 +27,12 @@ export default class App extends React.Component {
           <Icon name="bars" size="2x" />
         </Button>
         <section id="main" className="p-5">
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
+          <Suspense
+            fallback={<h1><Spinner color="primary" /> Loading</h1>}
+          >
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+          </Suspense>
         </section>
         <div id="backdrop" className="modal-backdrop show" onClick={() => this.open = !this.open} />
       </div>
