@@ -21,7 +21,7 @@
     "fecha": "^3.0.3",
     "history": "^4.9.0",
     "lodash.range": "^3.2.0",
-    "mobx": "^5.9.4",
+    "mobx": "^5.14.0",
     "mobx-react": "^5.4.4",
     "mobx-react-router": "^4.0.7",
     "prop-types": "^15.7.2",
