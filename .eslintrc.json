@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
     "node": true
@@ -8,9 +8,11 @@
   "rules": {
     "comma-dangle": 0,
     "import/extensions": 0,
+    "import/resolver": 0,
     "object-curly-newline": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
+    "react/jsx-props-no-spreading": 0,
     "react/require-default-props": 0,
     "react/sort-comp": [1, {
       "order": [
@@ -20,5 +22,10 @@
         "render"
       ]
     }]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    }
   }
 }

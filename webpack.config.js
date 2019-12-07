@@ -15,17 +15,42 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js/,
+        test: /\.[jt]sx?$/,
+        loader: 'babel-loader',
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        include: __dirname,
+        query: {
+          cacheDirectory: true,
+        }
       },
       {
         test: /\.s?css$/,
-        loader: 'style-loader!css-loader?modules&camelCase&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass-loader'
-      },
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'dts-css-modules-loader',
+            options: {
+              namedExport: true
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localsConvention: 'camelCaseOnly',
+              importLoaders: 2
+            }
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'sass-loader' }
+        ]
+      }
     ]
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin()
-  ]
+  ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+  }
 };

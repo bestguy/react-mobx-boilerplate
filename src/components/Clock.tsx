@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import range from 'lodash.range';
 
-const Clock = ({ width = 200, height = 200, time }) => {
+type Props = {
+  width?: number;
+  height?: number;
+  time: Date;
+};
+
+const Clock: FunctionComponent<Props> = ({ width = 200, height = 200, time }) => {
   const h = time.getHours();
   const m = time.getMinutes();
   const s = time.getSeconds();
