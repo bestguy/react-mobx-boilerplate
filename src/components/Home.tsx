@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <div>
-      <h1 className="border-dark border-bottom p-2">
+      <h1 className="border-dark border-bottom p-2" data-testid="page-header">
         <Icon name="home" className="text-info" /> Home
       </h1>
       <div className="d-flex align-items-center p-3">

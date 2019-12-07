@@ -3,7 +3,7 @@ import Icon from 'react-fontawesome';
 
 const AboutPage: FunctionComponent = () => (
   <div>
-    <h1 className="border-dark border-bottom p-2">
+    <h1 className="border-dark border-bottom p-2" data-testid="page-header">
       <Icon name="info-circle" className="text-info" /> About
     </h1>
     <p>
