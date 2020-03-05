@@ -18,7 +18,7 @@
   "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "@babel/preset-env": "^7.7.5",
+    "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.7.4",
     "@types/classnames": "^2.2.9",
     "@types/es6-promise": "^3.3.0",
