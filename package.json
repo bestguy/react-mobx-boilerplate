@@ -82,7 +82,7 @@
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.0.1",
     "typescript": "^3.7.3",
-    "webpack": "^4.41.2",
+    "webpack": "^4.44.1",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0"
   },
