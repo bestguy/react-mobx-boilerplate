@@ -4,11 +4,10 @@
 const webpack = require('webpack');
 const config = require('./webpack.config.js');
 
-config.devtool = 'cheap-module-eval-source-map';
+config.devtool = 'eval-cheap-module-source-map';
 config.mode = 'development';
 config.entry.unshift('webpack-hot-middleware/client');
 config.plugins = [
-  new webpack.optimize.OccurrenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoEmitOnErrorsPlugin(),
   new webpack.DefinePlugin({
