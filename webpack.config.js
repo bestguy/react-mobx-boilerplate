@@ -18,10 +18,7 @@ module.exports = {
         test: /\.[jt]sx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        include: __dirname,
-        query: {
-          cacheDirectory: true,
-        }
+        include: __dirname
       },
       {
         test: /\.s?css$/,
@@ -41,15 +38,11 @@ module.exports = {
               importLoaders: 2
             }
           },
-          { loader: 'postcss-loader' },
-          { loader: 'sass-loader' }
+          { loader: 'postcss-loader' }
         ]
       }
     ]
   },
-  plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin()
-  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   }

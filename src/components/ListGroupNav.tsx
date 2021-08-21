@@ -7,7 +7,7 @@ type Props = {
   to: string;
 };
 
-const ListGroupNav: FunctionComponent<Props> = ({ children, to }) => (
+const ListGroupNav = ({ children, to }: Props) => (
   <NavLink to={to} exact className="list-group-item" activeClassName="active">
     {children}
   </NavLink>

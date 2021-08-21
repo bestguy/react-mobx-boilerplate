@@ -7,7 +7,7 @@ type Props = {
   time: Date;
 };
 
-const Clock: FunctionComponent<Props> = ({ width = 200, height = 200, time }) => {
+const Clock = ({ width = 200, height = 200, time }: Props) => {
   const h = time.getHours();
   const m = time.getMinutes();
   const s = time.getSeconds();
