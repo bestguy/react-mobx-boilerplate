@@ -8,6 +8,9 @@ This is boilerplate for:
 [Webpack](https://webpack.github.io) 
 [Bootstrap 4](https://getbootstrap.com) 
 
+
+**Deprecated: Instead use `npm init vite@latest my-app -- --template react-ts`**
+
 ## Build
 
 ```bash
